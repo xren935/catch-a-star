@@ -123,10 +123,11 @@ class SatSettingForm extends Component {
   }
 
   showSatellite = e => {
+    // preventDefault method stops the default submit requst 
     e.preventDefault();
+    // validate field 
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        // console.log('Received values of form: ', values);
         this.props.onShow(values);
       }
     });

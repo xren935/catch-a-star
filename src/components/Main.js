@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "antd";
 import SatSetting from "./SatSetting";
+import SatelliteList from "./SatelliteList";
 
 class Main extends Component {
   render() {
@@ -8,6 +9,7 @@ class Main extends Component {
       <Row className="main">
         <Col span={8} className="left-side">
           <SatSetting />
+          <SatelliteList />
         </Col>
         <Col span={16} className="right-side">right
         </Col>
