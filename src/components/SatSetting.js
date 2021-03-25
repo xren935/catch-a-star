@@ -133,6 +133,8 @@ class SatSettingForm extends Component {
   };
 }
 
-const SatSetting = Form.create({ name: "satellite-setting" })(SatSettingForm);
+// const SatSetting = Form.create({ name: "satellite-setting" })(SatSettingForm);
+var mySatSettingFunc = Form.create({ name: "satellite-setting" });
+const SatSetting = mySatSettingFunc(SatSettingForm);
 
 export default SatSetting;

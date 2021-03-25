@@ -9,7 +9,8 @@ class Main extends Component {
         <Col span={8} className="left-side">
           <SatSetting />
         </Col>
-        <Col span={16} className="right-side">right</Col>
+        <Col span={16} className="right-side">right
+        </Col>
       </Row>
     );
   }
