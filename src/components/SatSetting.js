@@ -113,6 +113,7 @@ class SatSettingForm extends Component {
           <Button
             type="primary"
             htmlType="submit"
+            className="sat-btn"
             style={{ textAlign: "center" }}
           >
             Find Nearby Satellite
@@ -125,7 +126,6 @@ class SatSettingForm extends Component {
   showSatellite = e => {
     // preventDefault method stops the default submit requst 
     e.preventDefault();
-    
     // validate field 
     this.props.form.validateFields((err, values) => {
       if (!err) {

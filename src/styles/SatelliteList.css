@@ -5,11 +5,12 @@
     height: 410px;
 }
 
-.sat-list-btn {
+.sat-btn {
     text-transform: none;
-    padding: 10px 36px;
-    background-color: #2bb673;
+    /* padding: 10px 36px; */
+    background-color: #d3e0dc;
     font-size: 1em;
-    color: #fff;
+    color: rgb(7, 7, 87);
+    border: none;
 }
 

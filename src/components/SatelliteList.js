@@ -5,8 +5,7 @@ class SatelliteList extends Component {
     render() {
         return (
             <div className="sat-list-box">
-                <Button className="sat-list-btn"
-                        size="large">Track on the map</Button>
+                <Button type="primary" className="sat-btn">Track on the map</Button>
                 <hr/>
                 <div>data</div>
             </div>

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Row, Col } from "antd";
 import SatSetting from "./SatSetting";
 import SatelliteList from "./SatelliteList";
-import {NEARBY_SATELLITE, SAT_API_KEY, STARLINK_CATEGORY} from "../constants";
+import axios from 'axios';
+import {NEARBY_SATELLITE, SAT_API_KEY, STARLINK_CATEGORY} from "../constant";
 
 class Main extends Component {
   constructor(){
