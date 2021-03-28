@@ -20,7 +20,7 @@ class Main extends Component {
         settings: setting
     })
     this.fetchSatellite(setting);
-  }
+  };
 
   fetchSatellite= (setting) => {
     const {latitude, longitude, elevation, altitude} = setting;
@@ -36,26 +36,39 @@ class Main extends Component {
           this.setState({
               satInfo: response.data,
               isLoadingList: false
-          })
+          });
       })
       .catch(error => {
           console.log('err in fetch satellite -> ', error);
-      })
+      });
+    };
+
+    showMap = selected => {
+      this.setState(preState => ({
+        ...preState,
+        isLoadingMap: true,
+        satList: [...selected]
+      }));
+    };
+
+    render() {
+      const { satInfo } = this.state;
+      return (
+        <Row className="main">
+          <Col span={8} className="left-side">
+            <SatSetting onShow={this.showNearbySatellite} />
+            <SatelliteList
+              satInfo={satInfo}
+              isLoad={this.state.isLoadingList}
+              onShowMap={this.showMap}
+            />
+          </Col>
+          <Col span={16} className="right-side">
+            {/* <WorldMap /> */}
+          </Col>
+        </Row>
+      );
     }
-
-
-  render() {
-    return (
-      <Row className="main">
-        <Col span={8} className="left-side">
-          <SatSetting />
-          <SatelliteList />
-        </Col>
-        <Col span={16} className="right-side">right
-        </Col>
-      </Row>
-    );
-  }
 }
 
 export default Main;
