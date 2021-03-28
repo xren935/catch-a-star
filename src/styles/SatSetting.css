@@ -1,11 +1,16 @@
 .sat-setting {
     width: 100%;
     background-color: #ece2e1;
-    /* background-color: aqua; */
+    box-shadow: 4px 8px #cfcece;
     border: 1px solid #d9d9d9;
+    border-radius: 5%;
     padding: 10px 15px 0px 15px;
     text-align: left;
   }
+
+.ant-btn-primary:hover::after{
+    content: "🔎" !important;
+}
   
   .show-nearby {
     display: flex;

@@ -5,6 +5,11 @@ import SatelliteList from "./SatelliteList";
 import axios from 'axios';
 import {NEARBY_SATELLITE, SAT_API_KEY, STARLINK_CATEGORY} from "../constant";
 
+import WorldMap from './WorldMap';
+
+// sample data 
+// 70; -40; 90; 90; 2
+
 class Main extends Component {
   constructor(){
       super();
@@ -64,7 +69,7 @@ class Main extends Component {
             />
           </Col>
           <Col span={16} className="right-side">
-            {/* <WorldMap /> */}
+            <WorldMap />
           </Col>
         </Row>
       );
